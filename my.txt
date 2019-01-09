@@ -1,0 +1,207 @@
+Bash Commands:  
+uname –a                    :  it shows System and Kernel  
+head –n1 /etc/issue:  show distribution of the current system. 
+mount                          :  show the mounted files 
+date                               :  show the system date 
+uptime                          :  show the up time of the system 
+whoami                        :  show your username 
+man                                : show manual for the command 
+useradd                         : to create a new user 
+
+Bash variables: 
+
+env                                 :  show the environment variables 
+echo $NAME              :  show the output value of the $NAME variable 
+export NAME = value: set Name to value 
+$PATH                           :  Executable search path (doubt) 
+$HOME                        :  Home Directory 
+$SHELL                         :  Current Shell (doubt)  
+
+
+Bash Shortcuts:  
+
+CTRL – c                       :  Stop the current command 
+CTRL – z                       :  Sleep program 
+CTRL – a                       : Go to start of the line 
+CTRL – e                       : Go to the end of the line 
+CTRL – u                       : Cut from start of line 
+CTRL – k                       : Cut to the end of the line 
+CTRL –  r                       : Search history 
+!!                                    : Repeat the last command 
+!abc                               : Run last command starting with abc 
+!abc:p                           : print last command starting with abc 
+!$                                   : Last argument of the previous command 
+ALT-                               : Last argument of the previous command (Doubt) 
+!*                                   : all arguments of the previous command 
+^abc^123                   : Run last command, replacing abc with 123. 
+
+ 
+Directory Operations:  
+
+pwd                                : show the current directory 
+mkdir dir                       : Make directory dir 
+cd dir                              : change directory to dir 
+cd ..                                 : Go up a directory 
+ls                                      : List files 
+rm -r mydir                  : remove the directory  
+cd -                                : Go back to the previous directory 
+cd ~                               : To get back to the Home directory 
+ 
+ls options: 
+
+ 
+-a                                     : show all files(hidden files as well) 
+-R                                     : Recursive list 
+-r                                      : reverse order 
+-t                                      : sort by last modified 
+-S                                     : sort by the file size 
+-l                                      : long listing format 
+-1                                    : one file per line 
+-m                                   : comma separated output 
+-Q                                    : Quoted output  
+
+ 
+
+File Operations: 
+
+touch file1                : create file1 
+cat file1 file2            : concatenate files and output 
+less file1                     : view and paginate file1  
+file file1                      : Get type of file1 
+cp file1 file2              : Copy file1 to file2 
+mv file1 file2            : move file1 to file2 
+rm file1                      :  remove file1.c 
+head file1                 :  show first ten lines of file1 
+tail     file1                 :  show last ten lines of file1 
+tail –F file1               : output last lines of file1 as it changes. 
+
+Command History and Command Completion: 
+
+Echo $HISTFILESIZE : prints the history file size 
+history                       : to print all the commands used in the command line (!number (number in the history) will execute the file)
+
+Shell variables:  
+
+SET = set command you can get the alphabetical order of environmental variables. 
+
+ENV = Prints all the environmental variables 
+
+Create a new variable Eg: TEST="Testing", echo $TEST 
+
+PATH = $PATH/:opt  Sets the new path to the environment variable path temporarily 
+
+ 
+
+Globbing: Use globbing to effectively search and expand files and test in Linux.  
+
+* = Matches zero or more characters (Example: ls *.txt -> it displays all files with .txt extension 
+
+? = Matches any single character 
+
+[abc]  = Matches any one character in the list , case sensitive 
+
+[^abc] = Matches any one character except those in the list case sensitive 
+
+[0-9] = Matches the range of numbers 
+
+Locate = Searches a local database of files and folders looking for items to match the search criteria 
+
+Find  = Searches the filesystem for files to match the search criteria 
+
+whereis = Locates binary, source and/or manual pages for a command
+
+
+@ Tar: takes bunch of files and compress it to a single file.(manipulate archieve files) 
+
+Tar switches/options = function 
+
+-c = Create a new archive 
+
+-z = Pass the archive through the gzip compression 
+
+-f   = Filename of archive to create 
+
+unzip = Unzip a zip archive 
+
+gzip = Create a gzip archive 
+
+gunzip = Unzip a gzip archive 
+
+-x = Extract an archive 
+
+-t = To list the contents of the archive 
+
+Hardware: 
+
+Cat /proc/cpuinfo = To know the cpu information 
+
+Free  = To know how ram is used 
+
+dmidecode = To read the motherboard info as well as bios 
+
+df –h  = To know the free space of the harddrive in human readable format 
+
+lsblk  = To view all block devices 
+
+-m  = Show output in megabytes 
+
+-g  = Show output in GB
+
+
+@ Networking in Linux: 
+
+Ifconfig, ip addr show = To view the IP address 
+
+Ip route show, route, netstat –r = To view your default gateway 
+
+Host google.com = DNS hostname resolution 
+
+Cat /etc/resolv.conf = DNS server that our system contacts 
+
+host <domainname> = IP address responsible for the domain 
+
+Ping c –3 <domainname> = Troubleshooting a network connection 
+
+Cat /etc/hosts = Local name resolution file 
+
+@ Linux user accounts: 
+
+Who = To see who is logged into the system 
+
+w = To see who is logged into the system in more detail 
+
+id = View user and group id's of a specified user, command by itself shows ID of the current user 
+
+/etc/passwd   = Primary configuration files for all users on a system 
+
+/etc/group  = Primary configuration files for groups on a system 
+
+ 
+
+@Adding Users: 
+
+groupadd = To add the new group to the system 
+
+useradd = To add the new user to the system 
+
+G  = To add the user to the particular group id 
+
+g = It will create a the group id for user 
+
+-m  = To create a new directory for user 
+
+-c  = For comments 
+deluser = To delete a user
+groupdel = To delete a group
+
+@sudo useradd –G 1004 –m –c *Sidduaccount* siddu 
+
+Cat /etc/shadow = Primary configuration file for all encrypted passwords for users on the system 
+
+/etc/skel = Contents in this file are copied to home directories of newly created users 
+
+last  = To know who all logged in to the system 
+
+Cat /etc/group = To display the group id for all groups 
+
+   
