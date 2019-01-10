@@ -1,0 +1,13 @@
+git pull
+git push
+git branch
+git checkout
+git add .
+git commit -m ""
+git log
+git status
+git stash
+git stash pop
+git stash apply
+git merge
+
